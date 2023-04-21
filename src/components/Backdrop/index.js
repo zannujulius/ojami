@@ -1,7 +1,7 @@
 const Backdrop = ({ children, setopen, open }) => {
   return (
     <div
-      className="fixed h-screen w-screen bg-[#0000001b] top-0 right-0 z-50"
+      className="fixed h-screen w-screen bg-[#00000043] top-0 right-0 z-50"
       style={{
         display: open ? "block" : "none",
       }}
