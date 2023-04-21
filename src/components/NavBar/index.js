@@ -8,8 +8,10 @@ const NavBar = () => {
   return (
     <div className="fixed top-0 w-full">
       <div className="h-[70px] flex items-center justify-between w-full sm:w-full md:w-[90%] lg:w-[90%] mx-auto">
-        <div className="text-black text-[24px] font-semibold p-4">Oja Mi.</div>
-        <div className=" ml-40 hidden sm:hidden md:hidden  lg:flex">
+        <div className="text-black text-[25px] md:text-[30px] font-semibold p-4 font-Titan">
+          OjaMi.
+        </div>
+        <div className=" ml-40 hidden sm:hidden md:hidden lg:flex">
           <div className="flex mx-4 p-4 cursor-pointer">
             <div className="">Categories</div>
             <div className="flex items-center justify-center px-2">

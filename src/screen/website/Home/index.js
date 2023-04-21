@@ -10,11 +10,13 @@ const Home = () => {
   const [openaddress, setopenaddress] = useState(false);
   return (
     <>
-      {openaddress && <Address open={openaddress} setopen={setopenaddress} />}
+      {/* {openaddress &&  */}
+      {/* // } */}
       <Layout className="">
+        {openaddress && <Address open={openaddress} setopen={setopenaddress} />}
         <div className="md:grid lg:grid grid-cols-2 w-[90%] hidden sm:hidden mx-auto h-screen">
           <div className="flex items-center justify-center flex-col ">
-            <div className="text-[65px] font-semibold leading-[70px]">
+            <div className="text-[55px] font-Titan font-light leading-[70px]">
               Online store for fresh and affordable veggies
             </div>
             <div className="text-[25px] text-black mt-6 font-light">
@@ -23,7 +25,10 @@ const Home = () => {
             </div>
             <div className="w-full mt-8">
               <div className="w-[200px]">
-                <Button text={"Start shopping"} />
+                <Button
+                  text={"Start shopping"}
+                  onClick={() => setopenaddress(true)}
+                />
               </div>
             </div>
           </div>
@@ -37,15 +42,15 @@ const Home = () => {
           <div className="">
             <img src={HeroOne} className="w-full " />
           </div>
-          <div className="">
-            <div className="text-[30px] font-bold pt-2 text-center">
+          <div className="px-1">
+            <div className="text-[21px] font-Titan pt-2 mt-6 text-center">
               Online store for fresh and affordable veggies
             </div>
-            <div className="text-[20px] text-center text-black mt-6 font-light">
+            <div className="text-[17px] mx-auto w-[80%] text-center text-black mt-3 font-light">
               Fresh from the farm to your doorstep, providing the best
               vegetables.
             </div>
-            <div className="w-full flex items-center justify-center mt-8">
+            <div className="w-full flex items-center justify-center mt-4">
               <div className="w-[200px]">
                 <Button
                   text={"Start shopping"}
