@@ -5,7 +5,7 @@ import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import GoogleLogo from "../../../../assets/svgs/googlelogo.svg";
 import { useEffect, useState } from "react";
 import { Button } from "../../../../components/Button";
-import NoCartImg from "../../../../assets/png/nocart.png";
+import NoCartImg from "../../../../assets/svgs/nocart.svg";
 import Skimmer from "../../../Loader/Skimmer";
 import CartCard from "../../Card/CartCard";
 
@@ -37,9 +37,9 @@ const CartModal = ({ open, setopen, data = [] }) => {
               ))
             ) : !data.length ? (
               <div className="border-[1px] border-dashed rounded-md h-[300px] flex flex-col items-center justify-center my-6">
-                <img src={NoCartImg} className="w-[60px] h-[60px]" />
+                <img src={NoCartImg} className="w-[100px] h-[100px]" />
                 <div className="text-black font-semibold">
-                  You don't any item in your cart
+                  Your cart is currently empty.
                 </div>
               </div>
             ) : (
