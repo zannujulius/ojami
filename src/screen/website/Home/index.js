@@ -16,7 +16,7 @@ const Home = () => {
         {openaddress && <Address open={openaddress} setopen={setopenaddress} />}
         <div className="md:grid lg:grid grid-cols-2 w-[90%] hidden sm:hidden mx-auto h-screen">
           <div className="flex items-center justify-center flex-col ">
-            <div className="text-[55px] font-Titan font-light leading-[70px]">
+            <div className="text-[50px] font-Titan font-light leading-[70px]">
               Online store for fresh and affordable veggies
             </div>
             <div className="text-[25px] text-black mt-6 font-light">

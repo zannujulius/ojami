@@ -34,7 +34,12 @@ const Address = ({ open, setopen }) => {
           </div>
           <div className="text-center mt-6 text-lightprimary mb-[50px]">
             I just want to explore the website?{" "}
-            <span className="text-primary px-2 cursor-pointer">Skip</span>
+            <span
+              className="text-primary px-2 cursor-pointer"
+              onClick={() => setopen(false)}
+            >
+              Skip
+            </span>
           </div>
         </div>
       </div>
