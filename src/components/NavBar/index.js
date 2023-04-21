@@ -6,10 +6,12 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 import Register from "../../screen/website/Auth/Register";
 import Login from "../../screen/website/Auth/Login";
+import CartModal from "../Cart/Modals/CartModal";
 
 const NavBar = () => {
   const [openreg, setopenreg] = useState(false);
   const [openlogin, setopenlogin] = useState(false);
+  const [opencart, setopencart] = useState(false);
   return (
     <>
       {openreg && (
@@ -28,6 +30,8 @@ const NavBar = () => {
           setopenreg={setopenreg}
         />
       )}
+
+      {opencart && <CartModal open={opencart} setopen={setopencart} />}
       <div className="fixed top-0 w-full">
         <div className="h-[70px] flex items-center justify-between w-full sm:w-full md:w-[90%] lg:w-[90%] mx-auto">
           <div className="text-black text-[25px] md:text-[30px] font-semibold p-4 font-Titan">
@@ -43,8 +47,14 @@ const NavBar = () => {
             <div className="mx-4 p-4 cursor-pointer">My orders</div>
           </div>
           <div className="flex items-center">
-            <div className="flex items-center p-2 justify-center">
-              <BsHandbag />
+            <div
+              onClick={() => setopencart(true)}
+              className="flex items-center cursor-pointer relative p-2 justify-center"
+            >
+              <div className="flex items-center justify-center w-[20px] h-[20px] text-[13px] top-[-2px] right-[-1px]  absolute bg-primary text-white rounded-full">
+                0
+              </div>
+              <BsHandbag size={24} />
             </div>
             <div className="w-[100px] hidden sm:hidden md:flex lg:flex mx-4 ">
               <Button

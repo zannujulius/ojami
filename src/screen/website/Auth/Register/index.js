@@ -41,7 +41,7 @@ const Register = ({ open, setopen, openlogin, setopenlogin }) => {
             <div className="flex border-[1px] rounded-md px-2 p-2 h-[48px] mt-2">
               <input
                 className="w-[100%] h-full outline-none focus:border-none placeholder:text-lightprimary placeholder:text-[14px]"
-                type={eye ? "password" : "text"}
+                type={!eye ? "password" : "text"}
                 placeholder="Your password"
               />
               <div
