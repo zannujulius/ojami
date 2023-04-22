@@ -5,6 +5,7 @@ import HeroOne from "../../../assets/png/hero1.png";
 import Layout from "../../../components/Layout";
 import { useState } from "react";
 import Address from "../../../components/Address";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [openaddress, setopenaddress] = useState(false);
@@ -24,12 +25,12 @@ const Home = () => {
               vegetables.
             </div>
             <div className="w-full mt-8">
-              <div className="w-[200px]">
+              <Link to={"/shopping"} className="block w-[200px]">
                 <Button
                   text={"Start shopping"}
-                  onClick={() => setopenaddress(true)}
+                  // onClick={() => setopenaddress(true)}
                 />
-              </div>
+              </Link>
             </div>
           </div>
           <div className="h-full flex items-center justify-center w-full">
@@ -51,12 +52,12 @@ const Home = () => {
               vegetables.
             </div>
             <div className="w-full flex items-center justify-center mt-4">
-              <div className="w-[200px]">
+              <Link to="/shopping" className="w-[200px]">
                 <Button
                   text={"Start shopping"}
-                  onClick={() => setopenaddress(true)}
+                  // onClick={() => setopenaddress(true)}
                 />
-              </div>
+              </Link>
             </div>
           </div>
         </div>

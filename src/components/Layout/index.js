@@ -4,7 +4,7 @@ const Layout = ({ children }) => {
   return (
     <div className="">
       <NavBar />
-      <div className="">{children}</div>
+      <div className="w-[90%] mx-auto">{children}</div>
     </div>
   );
 };

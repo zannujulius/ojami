@@ -1,0 +1,23 @@
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: green;
+}
+
+.mobile-draw {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  transition: all 350ms ease;
+  animation: mobileslide 350ms ease;
+}
+
+@keyframes mobileslide {
+  from {
+    left: -200px;
+  }
+  to {
+    left: 0;
+  }
+}

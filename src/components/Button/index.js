@@ -14,6 +14,8 @@ export const Button = ({
   border,
   btnStyles,
   width,
+  padding,
+  fontSize,
 }) => {
   const override = css`
     display: block;
@@ -33,7 +35,8 @@ export const Button = ({
         background: bg || themeColor.primary,
         width: "100%" || width,
         height: height || 45,
-        borderRadius: "32px",
+        borderRadius: "10px",
+        padding: padding || 0,
         border: border || "none",
       }}
     >
@@ -49,6 +52,7 @@ export const Button = ({
           className="font-normal"
           style={{
             color: color || themeColor.white,
+            fontSize: fontSize || 16,
           }}
         >
           {text}

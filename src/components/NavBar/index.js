@@ -7,11 +7,14 @@ import { useState } from "react";
 import Register from "../../screen/website/Auth/Register";
 import Login from "../../screen/website/Auth/Login";
 import CartModal from "../Cart/Modals/CartModal";
+import MobileNav from "../MobileNav";
 
 const NavBar = () => {
   const [openreg, setopenreg] = useState(false);
   const [openlogin, setopenlogin] = useState(false);
   const [opencart, setopencart] = useState(false);
+  const [opennav, setopennav] = useState(false);
+
   return (
     <>
       {openreg && (
@@ -30,9 +33,9 @@ const NavBar = () => {
           setopenreg={setopenreg}
         />
       )}
-
+      {opennav && <MobileNav open={opennav} setopen={setopennav} />}
       {opencart && <CartModal open={opencart} setopen={setopencart} />}
-      <div className="fixed top-0 w-full">
+      <div className="fixed top-0 w-full z-[100]">
         <div className="h-[70px] flex items-center justify-between w-full sm:w-full md:w-[90%] lg:w-[90%] mx-auto">
           <div className="text-black text-[25px] md:text-[30px] font-semibold p-4 font-Titan">
             OjaMi.
@@ -67,7 +70,10 @@ const NavBar = () => {
             <div className="w-[205px] hidden sm:hidden md:flex lg:flex ">
               <Button text={"Register"} onClick={() => setopenreg(true)} />
             </div>
-            <div className="md:hidden lg:hidden p-3 ml-4 flex items-center justify-center cursor-pointer">
+            <div
+              className="md:hidden lg:hidden p-3 ml-4 flex items-center justify-center cursor-pointer"
+              onClick={() => setopennav(true)}
+            >
               <RxHamburgerMenu size={25} className="" />
             </div>
           </div>
