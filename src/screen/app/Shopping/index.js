@@ -9,6 +9,7 @@ import Skimmer from "../../../components/Loader/Skimmer";
 
 const Shopping = () => {
   const [opendiscount, setopendiscount] = useState(false);
+  const [inputname, setinputname] = useState("");
   const [loading, setloading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -48,7 +49,7 @@ const Shopping = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {loading
             ? Array.from(Array(10)).map((_, index) => (
-                <div className="border overflow-hidden rounded-md">
+                <div className="border overflow-hidden rounded-md" key={index}>
                   <div className=" h-[200px] w-full">
                     <Skimmer heigth={"100%"} />
                   </div>
@@ -65,7 +66,9 @@ const Shopping = () => {
                   </div>
                 </div>
               ))
-            : Array.from(Array(4)).map((_, index) => <ShoppingCard />)}
+            : Array.from(Array(4)).map((_, index) => (
+                <ShoppingCard key={index} />
+              ))}
         </div>
         <div className="h s-[100px]"></div>
       </div>

@@ -6,7 +6,7 @@ const ShoppingCard = () => {
   return (
     <div className="border overflow-hidden rounded-md">
       <div
-        className="  h-[200px] w-full"
+        className="  h-[230px] w-full"
         style={{
           background: `url(${ShoppingImg})`,
           backgroundPosition: "center",
