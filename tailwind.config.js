@@ -9,6 +9,7 @@ module.exports = {
         primary: "#13532E",
         lightprimary: "#1c1c1ccc",
         secondary: "#D8543C",
+        lightgray: "#F6F5F5",
       },
       fontFamily: {
         Titan: ["Titan One"],
