@@ -2,8 +2,10 @@ import Layout from "../../../components/Layout";
 import { IoIosArrowBack } from "react-icons/io";
 import Rule from "../../../components/Rule/Index";
 import CheckoutTab from "../../../components/Checkout/Tabs";
+import { useState } from "react";
 
 const Checkout = () => {
+  const [tabState, settabState] = useState(0);
   return (
     <Layout>
       <div className="mt-[90px]">
@@ -14,7 +16,7 @@ const Checkout = () => {
             </div>
             <div className="font-normal text-black px-2">Back to shopping</div>
           </div>
-          <div className="grid grid-cols-2 gap-10 mt-6">
+          <div className="grid grid-cols-2 gap-10 mt-6 mb-[100px] ">
             <div className="">
               <div className="flex justify-between">
                 <div className="">
@@ -24,9 +26,14 @@ const Checkout = () => {
                     </div>
                   </div>
                   <div className="font-light text-[14px] text-black">
-                    Check-out
+                    Checkout
                   </div>
                 </div>
+                <div
+                  className={`w-[180px] z-10 h-[2px] rounded-lg mt-2 ${
+                    tabState == 1 ? "bg-secondary" : "bg-white"
+                  }`}
+                ></div>
                 <div className="">
                   <div className="flex items-center justify-center">
                     <div className="border-[1px] border-secondary w-fit rounded-full p-[2px]">
@@ -37,6 +44,11 @@ const Checkout = () => {
                     Delivery
                   </div>
                 </div>
+                <div
+                  className={`w-[180px] z-10 h-[2px] rounded-lg mt-2 ${
+                    tabState == 2 ? "bg-secondary" : "bg-white"
+                  }`}
+                ></div>
                 <div className="">
                   <div className="flex items-center justify-center">
                     <div className="border-[1px] border-secondary w-fit rounded-full p-[2px]">
@@ -47,6 +59,11 @@ const Checkout = () => {
                     Payment
                   </div>
                 </div>
+                <div
+                  className={`w-[180px] z-10 h-[2px] rounded-lg mt-2 ${
+                    tabState == 3 ? "bg-secondary" : "bg-white"
+                  }`}
+                ></div>
                 <div className="">
                   <div className="flex items-center justify-center">
                     <div className="border-[1px] border-secondary w-fit rounded-full p-[2px]">
@@ -60,10 +77,10 @@ const Checkout = () => {
               </div>
               {/* tabs */}
               <div className="mt-12">
-                <CheckoutTab />
+                <CheckoutTab settabState={settabState} tabState={tabState} />
               </div>
             </div>
-            <div className="bg-lightgray rounded-md px-6 py-6">
+            <div className="bg-lightgray h-[auto] rounded-md px-6 py-6">
               <div className="bg-secondary text-center mb-4 text-[15px] rounded-md text-white p-2">
                 You’ve got 50% off as a new subscriber <span></span>
               </div>

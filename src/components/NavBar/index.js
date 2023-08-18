@@ -37,7 +37,8 @@ const NavBar = () => {
       {opencart && <CartModal open={opencart} setopen={setopencart} />}
       <div className="fixed top-0 w-full z-[100]">
         <div className="h-[70px] flex items-center justify-between w-full sm:w-full md:w-[90%] lg:w-[90%] mx-auto">
-          <div className="text-black text-[25px] md:text-[30px] font-semibold p-4 font-Titan">
+          <div className=" text-[25px] md:text-[30px] font-bold p-4 ">
+            {/* font-Titan */}
             OjaMi.
           </div>
           <div className=" ml-40 hidden sm:hidden md:hidden lg:flex">
